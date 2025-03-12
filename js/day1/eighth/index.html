@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+
+  <script>
+
+/*
+아래 코드를 화살표 함수로 변경해보세요.
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "동의하십니까?",
+  function() { console.log("동의하셨습니다."); },
+  function() { console.log("취소 버튼을 누르셨습니다."); }
+);
+*/
+
+
+const ask = (question, yes, no) => {
+  if (confirm(question)) yes()
+  else no();
+}
+const yes = () => console.log("동의하셨습니다.");
+const no = () => console.log("취소 버튼을 누르셨습니다.");
+
+ask('동의하십니까?', yes, no);
+
+
+
+
+  </script>
+</body>
+</html>
