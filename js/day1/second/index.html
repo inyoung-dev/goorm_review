@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+/*
+prompt 로 본인의 이름 데이터 를 입력 받고, 
+입력 받은 데이터로 confirm 모달 창으로 해당 이름이 본인 이름인지 확인하세요.
+본인 이름이 맞다면 console 에 true 가 찍히고, 본인 이름이 아니면 false 가 찍히도록 해주세요.
+*/
+
+const name = prompt("당신의 이름은 무엇인가요?"); //prompt 모달창으로 이름 받기
+const myName = confirm(`${name} 이 당신의 이름이 맞나요?`); //prompt로 받은 이름을 맞는지 confirm 모달창으로 확인 → 확인 : true / 취소 : false
+
+console.log(myName); // 결과(true/false)를 console창에 출력
+
+
+
+  </script>
+</body>
+</html>

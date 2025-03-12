@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+  <script>
+    /*
+    prompt를 사용하여 간이 로그인 창 구현해봅시다
+    1. 아이디 `prompt`에서 확인 절차는 아래와 같습니다.
+        1. 사용자가 “`Admin`”을 입력하면 비밀번호를 물어보는 `prompt` 창이 띄워집니다,
+        2. 이때 ‘`Admin`’이 아닌 다른 것을 입력하거나, 취소를 누르면 `취소되었습니다` 메시지 보여주세요.
+    2. 비밀번호 `prompt` 에서 확인 절차는 아래와 같습니다.
+        1. 맞는 비밀번호 “`CorrectPassword`” 를 입력했다면 `환영합니다` 메시지 보여주세요.
+        2. 틀린 비밀번호라면 `비밀번호가 잘못되었습니다` 메시지 보여주세요.
+        3. 빈 문자열이나 입력을 취소했다면 `취소되었습니다` 메시지 보여주세요.
+    */
+
+    const userId = 'Admin' //ID 값 지정
+    const userPw = 'password' // PW 값 지정
+
+    const idValue = prompt('아이디를 입력하세요.'); // ID 입력받기
+
+    if (idValue === userId) { // 입력받은 ID가 userId와 똑같은지 비교
+      const pwValue = prompt('비밀번호를 입력하세요.'); // 똑같을 경우 PW 입력받기
+      if (pwValue === userPw) { // 입력받은 PW가 userPw와 똑같은지 비교
+        alert('환영합니다.'); //똑같을 경우 '환영합니다.' 출력
+     } else if (pwValue !== null && pwValue !== '' && pwValue !== userPw) { // 사용자가 취소 버튼을 누르지 않았고, 입력을 비워두지도 않았으며, 입력한 비밀번호가 정답(userPw)이 아닐 때 실행
+        alert('비밀번호가 잘못되었습니다.');
+      } else {
+        alert('취소되었습니다.'); //취소 눌렀을 때
+      }
+    } else {
+      alert('취소되었습니다.'); // 취소 눌렀을 때
+    }
+
+
+  </script>
+</body>
+
+</html>
